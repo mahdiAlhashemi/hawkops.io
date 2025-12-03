@@ -1,5 +1,5 @@
 {
-  "name": "hawkops-io",
+  "name": "hawkopsio",
   "compatibility_date": "2025-12-03",
   "assets": {
     "directory": "./dist"
