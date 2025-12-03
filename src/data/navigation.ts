@@ -31,7 +31,7 @@ export const navigation: NavItem[] = [
         href: '/redteam'
       },
       {
-        label: 'Dark Web Monitoring',
+        label: 'Dark Web Monitoring & Threat Intelligence',
         href: '/dark-web-monitoring'
       }
     ]

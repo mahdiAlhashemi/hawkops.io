@@ -215,7 +215,7 @@ Our red team engagements test not only your technical defenses but also your peo
   {
     id: 'dark-web-monitoring',
     slug: 'dark-web-monitoring',
-    title: 'Dark Web Monitoring',
+    title: 'Dark Web Monitoring & Threat Intelligence',
     shortDescription: 'Proactively monitor your security posture against Dark Web threats, data breaches, compromised credentials, and network infections.',
     icon: '/images/services/dark-web-monitoring.png',
     heroImage: '/images/services/dark-web-monitoring.png',
