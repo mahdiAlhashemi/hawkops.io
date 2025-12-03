@@ -25,12 +25,12 @@
             <div
               v-for="cert in certifications"
               :key="cert.name"
-              class="bg-dark-100 rounded-lg p-3 flex items-center justify-center border border-white/5 hover:border-primary/20 transition-colors"
+              class="cert-badge"
             >
               <img
                 :src="cert.image"
                 :alt="cert.name"
-                class="h-10 w-auto object-contain"
+                class="cert-image"
               />
             </div>
           </div>
@@ -43,3 +43,30 @@
 <script setup lang="ts">
 import { certifications } from '@/data/certifications'
 </script>
+
+<style scoped>
+.cert-badge {
+  background: rgba(34, 30, 36, 0.8);
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+  aspect-ratio: 1;
+}
+
+.cert-badge:hover {
+  border-color: rgba(176, 14, 57, 0.3);
+  transform: translateY(-2px);
+}
+
+.cert-image {
+  width: 100%;
+  height: 100%;
+  max-width: 60px;
+  max-height: 60px;
+  object-fit: contain;
+}
+</style>
