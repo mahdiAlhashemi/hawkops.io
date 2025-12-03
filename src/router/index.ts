@@ -1,0 +1,83 @@
+import { createRouter, createWebHistory } from 'vue-router'
+import HomeView from '@/views/HomeView.vue'
+
+const router = createRouter({
+  history: createWebHistory(import.meta.env.BASE_URL),
+  routes: [
+    {
+      path: '/',
+      name: 'home',
+      component: HomeView,
+      meta: { title: 'HawkOps | Empowering You in the Digital Age' }
+    },
+    {
+      path: '/about-us',
+      name: 'about',
+      component: () => import('@/views/AboutView.vue'),
+      meta: { title: 'About Us | HawkOps' }
+    },
+    {
+      path: '/contact',
+      name: 'contact',
+      component: () => import('@/views/ContactView.vue'),
+      meta: { title: 'Contact | HawkOps' }
+    },
+    {
+      path: '/services',
+      name: 'services',
+      component: () => import('@/views/ServicesView.vue'),
+      meta: { title: 'Services | HawkOps' }
+    },
+    {
+      path: '/web-penetration-testing',
+      name: 'web-penetration-testing',
+      component: () => import('@/views/services/WebPenetrationTestingView.vue'),
+      meta: { title: 'Web Application Penetration Testing | HawkOps' }
+    },
+    {
+      path: '/mobile-application',
+      name: 'mobile-application',
+      component: () => import('@/views/services/MobileApplicationView.vue'),
+      meta: { title: 'Mobile Application Penetration Testing | HawkOps' }
+    },
+    {
+      path: '/secure-code-review',
+      name: 'secure-code-review',
+      component: () => import('@/views/services/SecureCodeReviewView.vue'),
+      meta: { title: 'Secure Code Review | HawkOps' }
+    },
+    {
+      path: '/penetration-testing',
+      name: 'penetration-testing',
+      component: () => import('@/views/services/PenetrationTestingView.vue'),
+      meta: { title: 'Infrastructure Penetration Testing | HawkOps' }
+    },
+    {
+      path: '/redteam',
+      name: 'redteam',
+      component: () => import('@/views/services/RedTeamView.vue'),
+      meta: { title: 'Red Team Operations | HawkOps' }
+    },
+    {
+      path: '/:pathMatch(.*)*',
+      name: 'not-found',
+      component: () => import('@/views/NotFoundView.vue'),
+      meta: { title: '404 - Page Not Found | HawkOps' }
+    }
+  ],
+  scrollBehavior(_to, _from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition
+    } else {
+      return { top: 0 }
+    }
+  }
+})
+
+// Update document title on navigation
+router.beforeEach((to, _from, next) => {
+  document.title = (to.meta.title as string) || 'HawkOps'
+  next()
+})
+
+export default router
