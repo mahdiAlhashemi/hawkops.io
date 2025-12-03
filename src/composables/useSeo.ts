@@ -207,5 +207,22 @@ export const seoConfigs = {
       areaServed: ['AE', 'IQ', 'SA', 'KW', 'QA', 'BH', 'OM'],
       serviceType: 'Cybersecurity'
     }
+  },
+  darkWebMonitoring: {
+    title: 'Dark Web Monitoring | Threat Intelligence & Data Breach Detection',
+    description: 'Proactive Dark Web monitoring to detect compromised credentials, data breaches, and security threats. Protect your organization from cybercriminals operating in underground forums and marketplaces.',
+    keywords: 'dark web monitoring, threat intelligence, data breach detection, compromised credentials, credential monitoring, dark web surveillance, cyber threat detection, breach alerts, security monitoring',
+    structuredData: {
+      '@context': 'https://schema.org',
+      '@type': 'Service',
+      name: 'Dark Web Monitoring',
+      provider: {
+        '@type': 'Organization',
+        name: 'HawkOps'
+      },
+      description: 'Continuous Dark Web monitoring to detect compromised credentials, data breaches, and emerging threats before they impact your organization.',
+      areaServed: ['AE', 'IQ', 'SA', 'KW', 'QA', 'BH', 'OM'],
+      serviceType: 'Cybersecurity'
+    }
   }
 }

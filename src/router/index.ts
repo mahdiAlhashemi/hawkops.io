@@ -59,6 +59,12 @@ const router = createRouter({
       meta: { title: 'Red Team Operations | HawkOps' }
     },
     {
+      path: '/dark-web-monitoring',
+      name: 'dark-web-monitoring',
+      component: () => import('@/views/services/DarkWebMonitoringView.vue'),
+      meta: { title: 'Dark Web Monitoring | HawkOps' }
+    },
+    {
       path: '/:pathMatch(.*)*',
       name: 'not-found',
       component: () => import('@/views/NotFoundView.vue'),

@@ -25,6 +25,14 @@ export const navigation: NavItem[] = [
       {
         label: 'Infrastructure Penetration Testing',
         href: '/penetration-testing'
+      },
+      {
+        label: 'Red Team Operations',
+        href: '/redteam'
+      },
+      {
+        label: 'Dark Web Monitoring',
+        href: '/dark-web-monitoring'
       }
     ]
   },

@@ -211,6 +211,66 @@ Our red team engagements test not only your technical defenses but also your peo
         content: 'We provide a comprehensive report detailing our findings, including the attack paths used, vulnerabilities discovered, and recommendations for improvement. Our focus is on enhancing your security awareness and capabilities without assigning blame.'
       }
     ]
+  },
+  {
+    id: 'dark-web-monitoring',
+    slug: 'dark-web-monitoring',
+    title: 'Dark Web Monitoring',
+    shortDescription: 'Proactively monitor your security posture against Dark Web threats, data breaches, compromised credentials, and network infections.',
+    icon: '/images/services/dark-web-monitoring.png',
+    heroImage: '/images/services/dark-web-monitoring.png',
+    intro: {
+      title: 'Dark Web Monitoring & Threat Intelligence',
+      description: `In the ever-evolving threat landscape, organizations face constant risks from data breaches, compromised credentials, and malicious actors operating in the shadows of the Dark Web. Our Dark Web Monitoring service provides continuous surveillance to detect and alert you to threats before they materialize into full-scale security incidents.
+
+We monitor underground forums, marketplaces, paste sites, and other hidden channels where cybercriminals trade stolen data, compromised credentials, and exploit kits. Our proactive approach enables you to respond to threats swiftly, protecting your organization's reputation, assets, and customer trust.`
+    },
+    points: {
+      title: 'Why Dark Web Monitoring?',
+      description: 'Cybercriminals operate in hidden corners of the internet, trading stolen data and planning attacks. Our monitoring service brings visibility to these threats.',
+      items: [
+        'Detect compromised employee and customer credentials before they are exploited by attackers.',
+        'Identify leaked sensitive data, intellectual property, and confidential documents on Dark Web marketplaces.',
+        'Monitor for mentions of your organization, executives, and brand in underground forums and channels.',
+        'Receive early warnings about planned attacks, vulnerabilities being traded, and emerging threats targeting your industry.'
+      ]
+    },
+    benefits: [
+      {
+        title: 'Compromised Credentials Detection',
+        icon: '/images/features/hacker.png',
+        description: 'Identify stolen usernames, passwords, and authentication tokens before attackers can use them to breach your systems.'
+      },
+      {
+        title: 'Data Breach Alerts',
+        icon: '/images/features/Attack-Surface.png',
+        description: 'Receive immediate notifications when your organization\'s data appears on Dark Web marketplaces or paste sites.'
+      },
+      {
+        title: 'Network Infection Monitoring',
+        icon: '/images/features/lifeline.png',
+        description: 'Detect indicators of compromise and malware infections targeting your network infrastructure.'
+      },
+      {
+        title: 'Brand & Executive Protection',
+        icon: '/images/features/Attack-Surface.png',
+        description: 'Monitor for impersonation attempts, phishing campaigns, and threats targeting your organization\'s leadership.'
+      }
+    ],
+    methodology: [
+      {
+        title: 'Discovery',
+        content: 'We begin by identifying your organization\'s digital footprint, including domains, email formats, executive names, and key assets. This baseline enables targeted monitoring across Dark Web sources relevant to your threat profile.'
+      },
+      {
+        title: 'Continuous Monitoring',
+        content: 'Our platform continuously scans Dark Web forums, marketplaces, paste sites, Telegram channels, and other underground sources. Advanced algorithms and human analysts work together to identify genuine threats and filter out noise.'
+      },
+      {
+        title: 'Alert & Response',
+        content: 'When threats are detected, you receive prioritized alerts with actionable intelligence. Our team provides context about the threat severity, potential impact, and recommended remediation steps to neutralize the risk.'
+      }
+    ]
   }
 ]
 
