@@ -89,14 +89,8 @@
             </ul>
           </div>
 
-          <!-- Right Side - CTA & Status -->
+          <!-- Right Side - CTA -->
           <div class="hidden lg:flex items-center gap-4">
-            <!-- Status Indicator -->
-            <div class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-green-500/10 border border-green-500/20">
-              <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
-              <span class="text-xs font-medium text-green-400">Online</span>
-            </div>
-
             <!-- CTA Button -->
             <router-link
               to="/contact"
