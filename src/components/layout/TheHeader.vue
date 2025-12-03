@@ -270,7 +270,6 @@ onUnmounted(() => {
   margin: 0 auto;
   border-radius: 1rem;
   position: relative;
-  overflow: hidden;
 }
 
 .header-default {
