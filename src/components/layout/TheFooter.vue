@@ -79,8 +79,9 @@
                   <img src="/images/icons/footer-call.png" alt="Phone" class="w-5 h-5" />
                 </span>
                 <span class="text-sm pt-2">
-                  {{ contactInfo.phones[0] }}<br />
-                  {{ contactInfo.phones[1] }}
+                  <span v-for="(phone, index) in contactInfo.phones" :key="index">
+                    {{ phone }}<br v-if="index < contactInfo.phones.length - 1" />
+                  </span>
                 </span>
               </a>
             </li>
