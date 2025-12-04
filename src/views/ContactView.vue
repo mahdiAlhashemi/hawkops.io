@@ -189,7 +189,12 @@
 
                 <!-- Success Message -->
                 <div v-if="submitSuccess" class="p-4 bg-green-500/10 border border-green-500/30 rounded-xl text-green-400 text-sm">
-                  Thank you for your message! Our team will contact you within 24 hours.
+                  Thank you for your message! Our team will contact you within 24 hours. A confirmation email has been sent to your inbox.
+                </div>
+
+                <!-- Error Message -->
+                <div v-if="submitError" class="p-4 bg-red-500/10 border border-red-500/30 rounded-xl text-red-400 text-sm">
+                  {{ submitError }}
                 </div>
               </form>
             </div>
@@ -315,8 +320,11 @@ import { contactInfo } from '@/data/contact'
 
 useSeo(seoConfigs.contact)
 
+const API_URL = import.meta.env.VITE_API_URL || 'https://api.hawkops.io'
+
 const isSubmitting = ref(false)
 const submitSuccess = ref(false)
+const submitError = ref('')
 
 const form = reactive({
   name: '',
@@ -330,13 +338,43 @@ const form = reactive({
 
 const handleSubmit = async () => {
   isSubmitting.value = true
+  submitSuccess.value = false
+  submitError.value = ''
 
-  // Simulate form submission (replace with actual API call)
-  await new Promise(resolve => setTimeout(resolve, 1500))
+  try {
+    const response = await fetch(`${API_URL}/api/contact`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(form),
+    })
 
-  // Send email via mailto (fallback)
-  const subject = encodeURIComponent(`[Website Inquiry] ${form.service} - ${form.company || form.name}`)
-  const body = encodeURIComponent(`
+    const data = await response.json()
+
+    if (!response.ok) {
+      throw new Error(data.message || 'Failed to send message')
+    }
+
+    submitSuccess.value = true
+
+    // Reset form
+    Object.assign(form, {
+      name: '',
+      company: '',
+      email: '',
+      phone: '',
+      service: '',
+      message: '',
+      consent: false
+    })
+  } catch (error) {
+    console.error('Contact form error:', error)
+    submitError.value = error instanceof Error ? error.message : 'Failed to send message. Please try again or contact us directly at info@hawkops.io'
+
+    // Fallback to mailto if API fails
+    const subject = encodeURIComponent(`[Website Inquiry] ${form.service} - ${form.company || form.name}`)
+    const body = encodeURIComponent(`
 Name: ${form.name}
 Company: ${form.company || 'N/A'}
 Email: ${form.email}
@@ -345,23 +383,15 @@ Service: ${form.service}
 
 Message:
 ${form.message}
-  `.trim())
+    `.trim())
 
-  window.location.href = `mailto:${contactInfo.email}?subject=${subject}&body=${body}`
-
-  isSubmitting.value = false
-  submitSuccess.value = true
-
-  // Reset form
-  Object.assign(form, {
-    name: '',
-    company: '',
-    email: '',
-    phone: '',
-    service: '',
-    message: '',
-    consent: false
-  })
+    // Open mailto as fallback
+    if (confirm('Would you like to send the message via email instead?')) {
+      window.location.href = `mailto:${contactInfo.email}?subject=${subject}&body=${body}`
+    }
+  } finally {
+    isSubmitting.value = false
+  }
 }
 </script>
 
