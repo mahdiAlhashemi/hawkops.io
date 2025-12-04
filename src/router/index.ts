@@ -29,6 +29,30 @@ const router = createRouter({
       meta: { title: 'Services | HawkOps' }
     },
     {
+      path: '/case-studies',
+      name: 'case-studies',
+      component: () => import('@/views/CaseStudiesView.vue'),
+      meta: { title: 'Case Studies | HawkOps' }
+    },
+    {
+      path: '/faq',
+      name: 'faq',
+      component: () => import('@/views/FaqView.vue'),
+      meta: { title: 'FAQ | HawkOps' }
+    },
+    {
+      path: '/privacy-policy',
+      name: 'privacy-policy',
+      component: () => import('@/views/PrivacyPolicyView.vue'),
+      meta: { title: 'Privacy Policy | HawkOps' }
+    },
+    {
+      path: '/terms-of-service',
+      name: 'terms-of-service',
+      component: () => import('@/views/TermsOfServiceView.vue'),
+      meta: { title: 'Terms of Service | HawkOps' }
+    },
+    {
       path: '/web-penetration-testing',
       name: 'web-penetration-testing',
       component: () => import('@/views/services/WebPenetrationTestingView.vue'),

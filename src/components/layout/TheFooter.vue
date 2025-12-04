@@ -55,6 +55,12 @@
               </router-link>
             </li>
             <li>
+              <router-link to="/case-studies" class="text-white/60 hover:text-accent transition-colors text-sm flex items-center gap-2 group">
+                <span class="w-1 h-1 bg-white/30 rounded-full group-hover:bg-accent transition-colors"></span>
+                Case Studies
+              </router-link>
+            </li>
+            <li>
               <router-link to="/contact" class="text-white/60 hover:text-accent transition-colors text-sm flex items-center gap-2 group">
                 <span class="w-1 h-1 bg-white/30 rounded-full group-hover:bg-accent transition-colors"></span>
                 Contact
@@ -153,8 +159,9 @@
           &copy; {{ currentYear }} HawkOps. All rights reserved.
         </p>
         <div class="flex items-center gap-6 text-sm">
-          <a href="#" class="text-white/40 hover:text-accent transition-colors">Privacy Policy</a>
-          <a href="#" class="text-white/40 hover:text-accent transition-colors">Terms of Service</a>
+          <router-link to="/privacy-policy" class="text-white/40 hover:text-accent transition-colors">Privacy Policy</router-link>
+          <router-link to="/terms-of-service" class="text-white/40 hover:text-accent transition-colors">Terms of Service</router-link>
+          <router-link to="/faq" class="text-white/40 hover:text-accent transition-colors">FAQ</router-link>
         </div>
       </div>
     </div>
