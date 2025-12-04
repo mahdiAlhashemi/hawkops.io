@@ -5,7 +5,8 @@ export const contactInfo: ContactInfo = {
   phones: [
     '+971 52 256 4824',
     '+971 52 917 8169',
-    '(+964) 07804724123'
+    '+964 780 696 9888',
+    '+964 772 523 7404'
   ],
   locations: [
     'Dubai, UAE',
