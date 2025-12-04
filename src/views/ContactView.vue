@@ -39,20 +39,28 @@
             </a>
 
             <!-- Phone -->
-            <a
-              :href="`tel:${contactInfo.phones[1]?.replace(/\s/g, '') ?? ''}`"
-              class="group cyber-card rounded-2xl p-8 text-center"
-            >
+            <div class="cyber-card rounded-2xl p-8 text-center">
               <div class="icon-container w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6">
                 <img src="/images/icons/call.svg" alt="Phone" class="w-8 h-8" />
               </div>
               <h3 class="text-lg font-semibold text-white mb-2">Call Us</h3>
-              <p class="text-white/60 group-hover:text-accent transition-colors whitespace-pre-line">
-                {{ contactInfo.phones[2] }}
-                <br />
-                {{ contactInfo.phones[1] }}
-              </p>
-            </a>
+              <div class="space-y-3">
+                <div>
+                  <span class="text-xs text-primary font-medium">UAE</span>
+                  <p class="text-white/60">
+                    <a :href="`tel:${contactInfo.phones[0]?.replace(/\s/g, '')}`" class="hover:text-accent transition-colors">{{ contactInfo.phones[0] }}</a><br />
+                    <a :href="`tel:${contactInfo.phones[1]?.replace(/\s/g, '')}`" class="hover:text-accent transition-colors">{{ contactInfo.phones[1] }}</a>
+                  </p>
+                </div>
+                <div>
+                  <span class="text-xs text-primary font-medium">Iraq</span>
+                  <p class="text-white/60">
+                    <a :href="`tel:${contactInfo.phones[2]?.replace(/\s/g, '')}`" class="hover:text-accent transition-colors">{{ contactInfo.phones[2] }}</a><br />
+                    <a :href="`tel:${contactInfo.phones[3]?.replace(/\s/g, '')}`" class="hover:text-accent transition-colors">{{ contactInfo.phones[3] }}</a>
+                  </p>
+                </div>
+              </div>
+            </div>
 
             <!-- Location -->
             <div class="cyber-card rounded-2xl p-8 text-center">
