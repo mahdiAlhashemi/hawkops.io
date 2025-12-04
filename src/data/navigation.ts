@@ -37,7 +37,15 @@ export const navigation: NavItem[] = [
     ]
   },
   {
+    label: 'Case Studies',
+    href: '/case-studies'
+  },
+  {
     label: 'About Us',
     href: '/about-us'
+  },
+  {
+    label: 'FAQ',
+    href: '/faq'
   }
 ]

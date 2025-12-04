@@ -5,7 +5,6 @@
     <AboutSection />
     <ServicesSection />
     <FeaturesSection />
-    <TestimonialsSection />
     <AcknowledgmentsSection />
     <CertifiedSection />
     <TheSeparator />
@@ -21,7 +20,6 @@ import StatsSection from '@/components/home/StatsSection.vue'
 import AboutSection from '@/components/home/AboutSection.vue'
 import ServicesSection from '@/components/home/ServicesSection.vue'
 import FeaturesSection from '@/components/home/FeaturesSection.vue'
-import TestimonialsSection from '@/components/home/TestimonialsSection.vue'
 import AcknowledgmentsSection from '@/components/home/AcknowledgmentsSection.vue'
 import CertifiedSection from '@/components/home/CertifiedSection.vue'
 import TheSeparator from '@/components/layout/TheSeparator.vue'
