@@ -19,7 +19,7 @@
           </div>
 
           <GlitchText
-            text="Empowering You in the Digital Age"
+            text="Secure Your Digital Life"
             tag="h1"
             text-class="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-[1.1] mb-6 fade-in-up fade-in-up-delay-1"
             auto-animate

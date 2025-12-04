@@ -8,7 +8,7 @@ const router = createRouter({
       path: '/',
       name: 'home',
       component: HomeView,
-      meta: { title: 'HawkOps | Empowering You in the Digital Age' }
+      meta: { title: 'HawkOps | Secure Your Digital Life' }
     },
     {
       path: '/about-us',
