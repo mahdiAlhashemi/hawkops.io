@@ -71,19 +71,23 @@
           </h3>
           <ul class="space-y-4">
             <li>
-              <a
-                href="tel:+971522564824"
-                class="flex items-start gap-3 text-white/60 hover:text-accent transition-colors group"
-              >
-                <span class="w-10 h-10 bg-white/5 rounded-xl flex items-center justify-center group-hover:bg-primary/20 transition-colors flex-shrink-0">
+              <div class="flex items-start gap-3 text-white/60">
+                <span class="w-10 h-10 bg-white/5 rounded-xl flex items-center justify-center flex-shrink-0">
                   <img src="/images/icons/footer-call.png" alt="Phone" class="w-5 h-5" />
                 </span>
-                <span class="text-sm pt-2">
-                  <span v-for="(phone, index) in contactInfo.phones" :key="index">
-                    {{ phone }}<br v-if="index < contactInfo.phones.length - 1" />
-                  </span>
-                </span>
-              </a>
+                <div class="text-sm pt-1">
+                  <span class="text-xs text-primary font-medium">UAE</span>
+                  <p class="mb-2">
+                    <a :href="`tel:${contactInfo.phones[0]?.replace(/\s/g, '')}`" class="hover:text-accent transition-colors">{{ contactInfo.phones[0] }}</a><br />
+                    <a :href="`tel:${contactInfo.phones[1]?.replace(/\s/g, '')}`" class="hover:text-accent transition-colors">{{ contactInfo.phones[1] }}</a>
+                  </p>
+                  <span class="text-xs text-primary font-medium">Iraq</span>
+                  <p>
+                    <a :href="`tel:${contactInfo.phones[2]?.replace(/\s/g, '')}`" class="hover:text-accent transition-colors">{{ contactInfo.phones[2] }}</a><br />
+                    <a :href="`tel:${contactInfo.phones[3]?.replace(/\s/g, '')}`" class="hover:text-accent transition-colors">{{ contactInfo.phones[3] }}</a>
+                  </p>
+                </div>
+              </div>
             </li>
             <li>
               <a
