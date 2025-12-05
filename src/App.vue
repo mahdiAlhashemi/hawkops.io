@@ -25,4 +25,8 @@
 import TheHeader from '@/components/layout/TheHeader.vue'
 import TheFooter from '@/components/layout/TheFooter.vue'
 import CookieConsent from '@/components/shared/CookieConsent.vue'
+import { useCanonical } from '@/composables/useCanonical'
+
+// Set canonical URL dynamically based on current route
+useCanonical()
 </script>
