@@ -3,7 +3,7 @@ import pngToIco from 'png-to-ico';
 import { promises as fs } from 'fs';
 import path from 'path';
 
-const inputFile = './public/images/icons/favicon.png';
+const inputFile = './public/images/icons/favicon-square.png';
 const outputDir = './public';
 const iconsDir = './public/images/icons';
 
