@@ -3,36 +3,11 @@
 
 User-agent: *
 Allow: /
-
-# Disallow admin or private paths (if any)
 Disallow: /api/
-Disallow: /_nuxt/
 Disallow: /admin/
 
 # Sitemap location
 Sitemap: https://hawkops.io/sitemap.xml
-
-# Crawl delay (optional, respected by some bots)
-Crawl-delay: 1
-
-# Specific bot rules
-User-agent: Googlebot
-Allow: /
-
-User-agent: Bingbot
-Allow: /
-
-User-agent: Slurp
-Allow: /
-
-User-agent: DuckDuckBot
-Allow: /
-
-User-agent: Baiduspider
-Allow: /
-
-User-agent: YandexBot
-Allow: /
 
 # Block bad bots
 User-agent: AhrefsBot
