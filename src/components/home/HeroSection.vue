@@ -74,6 +74,8 @@
             <img
               src="/images/global/hero-image.png"
               alt="Cybersecurity Hero"
+              width="512"
+              height="512"
               class="w-full max-w-lg mx-auto drop-shadow-2xl"
             />
           </div>

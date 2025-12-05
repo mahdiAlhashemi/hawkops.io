@@ -31,7 +31,7 @@
               <h3 class="text-white font-semibold mb-1">We Value Your Privacy</h3>
               <p class="text-white/60 text-sm leading-relaxed">
                 We use cookies to enhance your browsing experience and analyze our traffic. By clicking "Accept All", you consent to our use of cookies.
-                <router-link to="/privacy-policy" class="text-primary hover:text-accent ml-1">Learn more</router-link>
+                <router-link to="/privacy-policy" class="text-primary hover:text-accent ml-1">Read our Privacy Policy</router-link>
               </p>
             </div>
 

@@ -20,6 +20,9 @@
             <img
               src="/images/logo/logo.png"
               alt="HawkOps Logo"
+              width="251"
+              height="32"
+              fetchpriority="high"
               class="h-8 lg:h-9 w-auto transition-all duration-300 group-hover:scale-105 relative"
             />
           </router-link>

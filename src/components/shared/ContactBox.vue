@@ -40,7 +40,7 @@
               <div class="flex flex-col sm:flex-row items-start gap-4">
                 <router-link
                   to="/contact"
-                  class="group inline-flex items-center gap-3 bg-accent text-dark px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:bg-accent/90 hover:shadow-lg hover:shadow-accent/40"
+                  class="group inline-flex items-center gap-3 bg-accent text-gray-900 px-8 py-4 rounded-full font-bold transition-all duration-300 hover:bg-accent/90 hover:shadow-lg hover:shadow-accent/40"
                 >
                   Get Free Consultation
                   <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" viewBox="0 0 24 24" fill="none">

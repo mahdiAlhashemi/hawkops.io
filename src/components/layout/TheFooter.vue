@@ -12,6 +12,8 @@
             <img
               src="/images/logo/logo.png"
               alt="HawkOps Logo"
+              width="314"
+              height="40"
               class="h-10 w-auto transition-transform duration-300 group-hover:scale-105"
             />
           </router-link>
@@ -79,7 +81,7 @@
             <li>
               <div class="flex items-start gap-3 text-white/60">
                 <span class="w-10 h-10 bg-white/5 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <img src="/images/icons/footer-call.png" alt="Phone" class="w-5 h-5" />
+                  <img src="/images/icons/footer-call.png" alt="Phone" width="20" height="20" class="w-5 h-5" />
                 </span>
                 <div class="text-sm pt-1">
                   <span class="text-xs text-primary font-medium">UAE</span>
@@ -101,7 +103,7 @@
                 class="flex items-center gap-3 text-white/60 hover:text-accent transition-colors group"
               >
                 <span class="w-10 h-10 bg-white/5 rounded-xl flex items-center justify-center group-hover:bg-primary/20 transition-colors flex-shrink-0">
-                  <img src="/images/icons/footer-sms.png" alt="Email" class="w-5 h-5" />
+                  <img src="/images/icons/footer-sms.png" alt="Email" width="20" height="20" class="w-5 h-5" />
                 </span>
                 <span class="text-sm">{{ contactInfo.email }}</span>
               </a>
@@ -109,7 +111,7 @@
             <li>
               <div class="flex items-start gap-3 text-white/60">
                 <span class="w-10 h-10 bg-white/5 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <img src="/images/icons/footer-map.png" alt="Location" class="w-5 h-5" />
+                  <img src="/images/icons/footer-map.png" alt="Location" width="20" height="20" class="w-5 h-5" />
                 </span>
                 <span class="text-sm pt-2">
                   {{ contactInfo.locations[0] }}<br />
