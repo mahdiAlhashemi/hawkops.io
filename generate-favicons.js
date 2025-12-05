@@ -1,4 +1,5 @@
 import sharp from 'sharp';
+import pngToIco from 'png-to-ico';
 import { promises as fs } from 'fs';
 import path from 'path';
 
@@ -36,20 +37,17 @@ async function generateFavicons() {
       console.log(`Created ${name}`);
     }
 
-    // Create favicon.ico (multi-size ICO format) - just copy 32x32 as ico
-    // For proper ICO, we'll use the 48x48 PNG renamed
-    await sharp(inputFile)
-      .resize(48, 48, {
-        fit: 'contain',
-        background: { r: 0, g: 0, b: 0, alpha: 0 }
-      })
-      .png()
-      .toFile(path.join(outputDir, 'favicon.png'));
-    console.log('Created favicon.png in root');
+    // Create favicon.ico with multiple sizes (16, 32, 48)
+    const icoBuffer = await pngToIco([
+      path.join(iconsDir, 'favicon-16x16.png'),
+      path.join(iconsDir, 'favicon-32x32.png'),
+      path.join(iconsDir, 'favicon-48x48.png'),
+    ]);
+    await fs.writeFile(path.join(outputDir, 'favicon.ico'), icoBuffer);
+    console.log('Created favicon.ico (multi-size: 16, 32, 48)');
 
     console.log('\nAll favicons generated successfully!');
     console.log('\nGoogle requires at least 48x48 pixels for search results.');
-    console.log('Make sure to update index.html with the new favicon paths.');
 
   } catch (error) {
     console.error('Error generating favicons:', error);
